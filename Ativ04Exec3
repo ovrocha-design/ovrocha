@@ -1,0 +1,31 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+        System.out.println("Em qual período você estuda?");
+        System.out.print("Digite uma das letras M , V ou N");
+        System.out.println(" ");
+        System.out.println("M para Matutino.");
+        System.out.println("V para Vespertino.");
+        System.out.println("N para Noturno.");
+        char periodo = entrada.next().toUpperCase().charAt(0);
+        String saudacao;
+        switch (periodo) {
+            case 'M':
+                saudacao = "Matutino.";
+                break;
+            case 'V':
+                saudacao = "Vespertino.";
+                break;
+            case 'N':
+                saudacao = "Noturno.";
+                break;
+            default:
+                saudacao = "Item invalido.";
+                break;
+        }
+        System.out.println(saudacao);
+
+        entrada.close();
+    }
+}
