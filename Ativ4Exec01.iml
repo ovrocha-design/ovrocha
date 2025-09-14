@@ -1,11 +1,46 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<module type="JAVA_MODULE" version="4">
-  <component name="NewModuleRootManager" inherit-compiler-output="true">
-    <exclude-output />
-    <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
-    </content>
-    <orderEntry type="inheritedJdk" />
-    <orderEntry type="sourceFolder" forTests="false" />
-  </component>
-</module>
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        System.out.print("Digite um numero inteiro de 1 a 7:");
+        System.out.println(" ");
+        System.out.println("1 para domingo.");
+        System.out.println("2 para segunda feira.");
+        System.out.println("3 para terça feira.");
+        System.out.println("4 para quarta feira.");
+        System.out.println("5 para quinta feira.");
+        System.out.println("6 para sexta feira.");
+        System.out.println("7 para sabado.");
+        Scanner entrada = new Scanner(System.in);
+        int menu = entrada.nextInt();
+        String nomeDia;
+        switch (menu) {
+            case 1:
+                nomeDia = "domingo.";
+                break;
+            case 2:
+                nomeDia = "segunda feira.";
+                break;
+            case 3:
+                nomeDia = "terça feira.";
+                break;
+            case 4:
+                nomeDia = "quarta feira.";
+                break;
+            case 5:
+                nomeDia = "quinta feira.";
+                break;
+            case 6:
+                nomeDia = "sexta feira.";
+                break;
+            case 7:
+                nomeDia = "sabado.";
+                break;
+            default:
+                nomeDia = "Item de menu invalido.";
+                break;
+        }
+                System.out.println(nomeDia);
+
+                entrada.close();
+        }
+    }
